@@ -34,8 +34,27 @@ public class FlyController : MonoBehaviour
             destroy();
         }
 
-        // float rndX = Random.Range(-0.1f, 0.1f);
-        // float rndY = Random.Range(-0.1f, 0.1f);
-        // transform.Translate(rndX, rndY, 0);
+        float rndX = Random.Range(-0.1f, 0.1f);
+        float rndY = Random.Range(-0.1f, 0.1f);
+        transform.Translate(rndX, rndY, 0);
+
+        Vector3 position = this.transform.position;
+        if (position.x > 8.0f)
+        {
+            transform.Translate(-1.0f, 0, 0);
+        }
+        else if (position.x < -8.0f)
+        {
+            transform.Translate(1.0f, 0, 0);
+        }
+
+        if (position.y > 4.0f)
+        {
+            transform.Translate(0, -1.0f, 0);
+        }
+        else if (position.x < -4.0f)
+        {
+            transform.Translate(0, 1.0f, 0);
+        }
     }
 }
