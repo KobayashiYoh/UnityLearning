@@ -76,4 +76,6 @@ crashlytics-build.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/unity
 
+## PackageCache
 ClickGame/Library/PackageCache/com.unity.burst@1.8.4/
+BreakingBlocksGame/Library/PackageCache/com.unity.burst@1.8.4/.Runtime/
