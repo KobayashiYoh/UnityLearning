@@ -28,6 +28,7 @@ public class PaddleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 進む方向を決定
         int direction = 0;
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -37,6 +38,13 @@ public class PaddleController : MonoBehaviour
         {
             direction = -1;
         }
+
+        bool isChangeDirection = (rb2D.velocity.x < 0 && direction == 1) || (rb2D.velocity.x > 0 && direction == -1);
+        if (isChangeDirection) {
+            rb2D.velocity = Vector2.zero;
+        }
+
+        // スピードが出過ぎないように調整
         float speedx = Mathf.Abs(rb2D.velocity.x);
         if (speedx < maxMoveSpeed)
         {
