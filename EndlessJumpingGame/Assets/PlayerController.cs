@@ -40,5 +40,10 @@ public class PlayerController : MonoBehaviour
         {
             rb2D.AddForce(transform.right * direction * walkForce);
         }
+
+        if (transform.position.y < -8)
+        {
+            Destroy(gameObject);
+        }
     }
 }
