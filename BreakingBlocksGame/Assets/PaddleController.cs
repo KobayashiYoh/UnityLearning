@@ -6,10 +6,10 @@ public class PaddleController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     private float moveForce = 30.0f;
-    private float maxMoveSpeed = 2.0f;
+    private float maxMoveSpeed = 5.0f;
 
     // Y座標が変更されないよう修正する。
-    void adjustPosY()
+    void AdjustPosY()
     {
         if (transform.position.y != -4.0f)
         {
@@ -34,13 +34,12 @@ public class PaddleController : MonoBehaviour
         {
             direction = 1;
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             direction = -1;
         }
-
-        bool isChangeDirection = (rb2D.velocity.x < 0 && direction == 1) || (rb2D.velocity.x > 0 && direction == -1);
-        if (isChangeDirection) {
+        else
+        {
             rb2D.velocity = Vector2.zero;
         }
 
@@ -51,7 +50,6 @@ public class PaddleController : MonoBehaviour
             rb2D.AddForce(transform.right * direction * moveForce);
         }
 
-        adjustPosY();
-
+        AdjustPosY();
     }
 }
