@@ -79,3 +79,4 @@ crashlytics-build.properties
 ## PackageCache
 ClickGame/Library/PackageCache/com.unity.burst@1.8.4/
 BreakingBlocksGame/Library/PackageCache/com.unity.burst@1.8.4/.Runtime/
+EndlessJumpingGame/Library/PackageCache/com.unity.burst@1.8.4/.Runtime/
