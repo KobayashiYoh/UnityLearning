@@ -8,7 +8,7 @@ public class BlockGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (float y = 0; y < 100f; y += 5f)
+        for (float y = 4.0f; y < 100f; y += 8.0f)
         {
             float x = Random.Range(-7.0f, 7.0f);
             GameObject gameObject = Instantiate(blockPrefab) as GameObject;
