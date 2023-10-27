@@ -376,6 +376,7 @@
 "Assets/BlockController.cs"
 "Assets/BlockGenerator.cs"
 "Assets/CameraController.cs"
+"Assets/GameDirector.cs"
 "Assets/PlayerController.cs"
 -langversion:9.0
 
